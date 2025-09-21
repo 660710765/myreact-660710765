@@ -1,0 +1,23 @@
+import { useNavigate } from 'react-router-dom';
+
+const NotFound = () => {
+  const navigate = useNavigate();
+
+  const handleGoHome = () => {
+    navigate("/");
+  };
+
+  return (
+    <div
+      style={{
+        textAlign: "center"        // ข้อความอยู่กึ่งกลาง
+      }}
+    >
+      <h1>404 - Not Found</h1>
+      <p>The page you are looking for does not exist</p>
+      <button onClick={handleGoHome}>Go Home</button>
+    </div>
+  );
+};
+
+export default NotFound;
